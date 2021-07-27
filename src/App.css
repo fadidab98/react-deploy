@@ -1,38 +1,162 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.navbar-toggler-icon {
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.navbar-brand{
+  background-color: transparent;
+  border:0px;
+}
+.toggle-nave{
+  position:fixed;
+  top:0;
+  left:0;
+  overflow-x:hidden;
+  width:0px;
+  transition:1s;
+  height: 100vh;
+  background-color:#f7ca02;
+  z-index: 20;
+}
+.toggle-nave h2{
+  margin-top: 1.1rem;
+ 
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.toggle-nave hr{
+  color:white;
+}
+.toggle-nave ul{
+  list-style:none;
+  margin-top:2rem;
+  padding:0;
+  width:100%;
+  
+}
+.toggle-nave li{
+  list-style:none;
+  display:block;
+  padding-top:10px;
+  padding-bottom:10px;
+  text-align:center;
+  width:100%;
+  margin: auto;
+  margin-top:1rem;
+  
+  
+}
+.toggle-nave li .logout-btn{
+  background:transparent;
+  border:0px;
+}
+.toggle-nave li:hover{
+  background-color:rgba(255, 255, 255, 0.384);
+  cursor: pointer;
+}
+.navbar{
+  margin-left:0px;
+  transition: 1s;
+}
+.login-container {
+  height: 100vh;
+  width: 100%;
+
+  background-color: #e2e213;
+  position: relative;
+}
+.login-container form {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60%;
+  height: 50%;
+  text-align: center;
+}
+.signIn {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 20;
+  position: fixed;
+  top: -50%;
+  right: 0;
+  left:-33.3%;
+  margin: 0 auto;
+ 
+}
+.signIn form{
+  margin: 0 auto;
+  background: #ffffff;
+  height: auto;
+  width: 500px;
+  padding: 30px;
+  z-index: 20;
+  box-shadow: 0 0 0.8rem rgba(200, 226, 255, 0.6);
+
+}
+.navbar-item{
+  text-align:center;
+}
+
+.nav-link{
+  display: inline-block;
+  width: 90px;
+  height: 40px;
+  margin: 10px;
+ 
+  color: #0984e3;
+  overflow: hidden;
+  position: relative;
+  
+}
+.nav-link:before{
+  content: "";
+  position: absolute;
+  width: 120%;
+  height: 120%;
+  background: #ffffff5d;
+  transform: rotate(360deg);
+  left: -110%;
+  top: 100%;
+}
+.nav-link:hover::before {
+  animation: aaa 0.7s 1;
+  top: -15%;
+  left: -10%;
+}
+@keyframes aaa {
+  0% {
+    left: -110%;
+    top: 100%;
   }
-  to {
-    transform: rotate(360deg);
+  50% {
+    left: 10%;
+    top: -30%;
+  }
+  100% {
+    top: -10%;
+    left: -20%;
+  }
+}
+
+
+
+@media only screen and (max-width: 991px) {
+  .navbar-collapse{
+    text-align:center;
+  }
+  
+  .nav-link{
+    display: inline-block;
+    width: 90px;
+    height: 40px;
+    margin: 10px;
+   text-align: center;
+    color: #0984e3;
+    overflow: hidden;
+    position: relative;
+    
   }
 }
